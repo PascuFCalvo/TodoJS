@@ -1,0 +1,27 @@
+{
+  "name": "curso-asincronismo",
+  "version": "1.0.0",
+  "description": "curso asincronismo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "asincronismo"
+  ],
+  "author": "pascual",
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PascuFCalvo/asincronismo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PascuFCalvo/asincronismo/issues"
+  },
+  "homepage": "https://github.com/PascuFCalvo/asincronismo#readme"
+}

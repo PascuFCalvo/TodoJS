@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+        
+    </style>
+</head>
+
+<body>
+    <div class="title">GEEKS GADGET SHOP</div>
+    <div class="titlemobile">GGSHOP</div>
+    <div class=navbar>
+        <div>
+            <div class="componentes">Componentes</div>
+            <div class="video">Video</div>
+            <div class="audio">Audio</div>
+            <div class="electronica">Electronica</div>
+            <div class="entretenimiento">Entretenimiento</div>
+        </div>
+
+        <div>
+            <div class="login">Log In</div>
+        </div>
+    </div>
+    <div class=contenedor-principal>
+        <div class ="popupcompra"><p>GRACIAS POR LA COMPRA</p></div>
+        <div class="mostrador">
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="1">
+                <img src="items_proyecto/monitor.png" class="foto"></img>
+                <div class="descripcion">Monitor PC</div>
+                <p>500€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="2">
+                <img src="items_proyecto/portatil.png" class="foto"></img>
+                <div class="descripcion">Portatil MaK</div>
+                <p>2000€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="3">
+                <img src="items_proyecto/raton.png" class="foto"></img>
+                <div class="descripcion">Raton</div>
+                <p>50€</p>
+                <p></p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="4">
+                <img src="items_proyecto/TV.png" class="foto"></img>
+                <div class="descripcion">TV Smasnung</div>
+                <p>800€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="5">
+                <img src="items_proyecto/auriculares.png" class="foto"></img>
+                <div class="descripcion">Auriculares</div>
+                <p>150€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="6">
+                <img src="items_proyecto/smartwatch.png" class="foto"></img>
+                <div class="descripcion">MelonWatch</div>
+                <p>300€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="7">
+                <img src="items_proyecto/teclado.png" class="foto"></img>
+                <div class="descripcion">Teclado</div>
+                <p>100€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="8">
+                <img src="items_proyecto/telefono.png" class="foto"></img>
+                <div class="descripcion">APhone</div>
+                <p>1400€</p>
+
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="1">
+                <img src="items_proyecto/monitor.png" class="foto"></img>
+                <div class="descripcion">Monitor PC</div>
+                <p>500€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="2">
+                <img src="items_proyecto/portatil.png" class="foto"></img>
+                <div class="descripcion">Portatil MaK</div>
+                <p>2000€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="3">
+                <img src="items_proyecto/raton.png" class="foto"></img>
+                <div class="descripcion">Raton</div>
+                <p>50€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="4">
+                <img src="items_proyecto/TV.png" class="foto"></img>
+                <div class="descripcion">TV Smasnung</div>
+                <p>800€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="5">
+                <img src="items_proyecto/auriculares.png" class="foto"></img>
+                <div class="descripcion">Auriculares</div>
+                <p>150€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="6">
+                <img src="items_proyecto/smartwatch.png" class="foto"></img>
+                <div class="descripcion">MelonWatch</div>
+                <p>300€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="7">
+                <img src="items_proyecto/teclado.png" class="foto"></img>
+                <div class="descripcion">Teclado</div>
+                <p>100€</p>
+            </div>
+            <div class="producto" draggable="true" ondragstart="drag(event)" id="8">
+                <img src="items_proyecto/telefono.png" class="foto"></img>
+                <div class="descripcion">APhone</div>
+                <p>1400€</p>
+
+            </div>
+
+
+        </div>
+        <div class="botom">
+            <div class="zonaarrastre" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                <p>Arrastra aqui para añadir al carrito</p>
+                
+                
+                <div class="popup">
+                    <p>PRODUCTO AÑADIDO</p>
+                </div>
+            </div>
+            <div class="contenedorcarrito">
+                <div class="titulocarrito"> RESUMEN COMPRA</div>
+                <ul class="carrito" id="carrito"></ul>
+                <div class="total">
+                    <div class="totalproductos"></div>
+                    <div class="totalcompra"></div>
+                    <button class = "botonterminar">Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

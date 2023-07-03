@@ -1,0 +1,52 @@
+<h2>{{titulo}}</h2>
+
+<p>Añadir marca</p>
+<p><input type = "text" [(ngModel)]="miMarca"/></p>
+<p>{{miMarca}}</p>
+<button (click)="addMarca()">Añadir</button>
+<p>Compra zapas de nuestras mejores marcas</p>
+<ul>
+    <li *ngFor="let marcaZapa of marcaZapas">{{marcaZapa}}</li>
+</ul>
+<hr>
+<p>Modelos top Venta</p>
+<ul>
+    <!--crear la lista de zapatillas con un for por ejemplo-->
+    <!--directiva estructural que te permite recorrer una coleccion de objetos-->
+    <li *ngFor="let elemento of zapatillas">{{elemento.nombre}} - {{elemento.precio}} €
+        <span *ngIf=" elemento.precio < 120 " [style.background]=" elemento.precio <110 ? 'green' : 'red' ">
+            OFERTA! </span>
+    </li>
+
+
+
+</ul>
+
+<p>Modelos en stock</p>
+<ul>
+    <li *ngFor="let elemento of zapatillas">
+        <span [ngStyle]="{
+            'text-decoration' : !elemento.stock ? 'line-through' : 'none'
+            }" [style.color]="!elemento.stock ? 'red' : 'green' ">
+            {{elemento.nombre}} - <strong>{{elemento.precio}} €</strong></span>
+
+        <span *ngIf=" elemento.precio < 120 " [style.background]=" elemento.precio <110 ? 'green' : 'red' ">
+            OFERTA! </span>
+
+    </li>
+
+</ul>
+
+<p>El color de la mayoria de nuestras zapatilas es:</p>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">
+        el color mas comun es <span [ngStyle] ="{'background' : color,}">amarillo</span>.
+    </li>
+    <li *ngSwitchCase=" 'red'">
+        el color mas comun es <span [ngStyle] ="{'background' : color,}">rojo</span>.
+    </li>
+    <li *ngSwitchCase=" 'blue'">
+        el color mas comun es <span [ngStyle] ="{'background' : color,}">azul</span>.
+    </li>
+</ul>
+<hr>

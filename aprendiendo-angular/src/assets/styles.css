@@ -1,0 +1,13 @@
+.altoprecio{
+    color:gray ;
+    font-size: 30px ;
+}
+.fondorojo{
+    background: red;
+}
+.subrayado{
+    text-decoration: underline;
+}
+.activado{
+    border: 2px solid red;
+}

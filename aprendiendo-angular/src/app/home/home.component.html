@@ -1,0 +1,31 @@
+<h2>pagina principal (home)</h2>
+
+
+<!--como hacer un else...-->
+
+<!--
+ <div *ngIf="identificado; else noIdentificado">
+    Identificado = true
+    <button (click)="unsetIdentificado() ">Borrar Ident</button>
+</div>
+
+<ng-template #noIdentificado>
+    <p>Identificado = false, pulsa este boton para pasarlo a true</p>
+    <button (click)="setIdentificado() ">Ident</button>
+</ng-template>   
+-->
+
+<!--metiendolo todo en una plantilla para utilizar then-->
+
+<div *ngIf="identificado; then identificadoTemplate else noidentificadoTemplate"></div>
+
+<ng-template #identificadoTemplate>
+    Identificado = true
+    <button (click)="unsetIdentificado() ">Borrar Ident</button>
+</ng-template>
+
+
+<ng-template #noidentificadoTemplate>
+    <p>Identificado = false, pulsa este boton para pasarlo a true</p>
+    <button (click)="setIdentificado() ">Ident</button>
+</ng-template>

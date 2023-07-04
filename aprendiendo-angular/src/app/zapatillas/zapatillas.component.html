@@ -1,20 +1,25 @@
 <h2>{{titulo}}</h2>
 
 <p>Añadir marca</p>
-<p><input type = "text" [(ngModel)]="miMarca"/></p>
+<p><input type="text" [(ngModel)]="miMarca" (keyup.enter)="mostrarMarca()" (blur)="onBlur()" /></p>
 <p>{{miMarca}}</p>
 <button (click)="addMarca()">Añadir</button>
 <p>Compra zapas de nuestras mejores marcas</p>
 <ul>
-    <li *ngFor="let marcaZapa of marcaZapas">{{marcaZapa}}</li>
+    <li *ngFor="let marcaZapa of marcaZapas; let indice = index">{{marcaZapa}}
+        <button (click)="borrarMarca(indice)">Borrar</button>
+    </li>
 </ul>
 <hr>
 <p>Modelos top Venta</p>
 <ul>
     <!--crear la lista de zapatillas con un for por ejemplo-->
     <!--directiva estructural que te permite recorrer una coleccion de objetos-->
-    <li *ngFor="let elemento of zapatillas">{{elemento.nombre}} - {{elemento.precio}} €
+    <li *ngFor="let elemento of zapatillas">{{elemento.nombre}} - <span [class.altoprecio]="elemento.precio >= 150"
+            [ngClass]="{'fondorojo': elemento.precio >120,
+                        'subrayado': elemento.nombre == 'Jordan'}">{{elemento.precio}}</span> €
         <span *ngIf=" elemento.precio < 120 " [style.background]=" elemento.precio <110 ? 'green' : 'red' ">
+
             OFERTA! </span>
     </li>
 
@@ -38,15 +43,16 @@
 </ul>
 
 <p>El color de la mayoria de nuestras zapatilas es:</p>
+<input type="text" [(ngModel)]="color" />
 <ul [ngSwitch]="color">
     <li *ngSwitchCase="'yellow'">
-        el color mas comun es <span [ngStyle] ="{'background' : color,}">amarillo</span>.
+        el color mas comun es <span [ngStyle]="{'background' : color,}">amarillo</span>.
     </li>
     <li *ngSwitchCase=" 'red'">
-        el color mas comun es <span [ngStyle] ="{'background' : color,}">rojo</span>.
+        el color mas comun es <span [ngStyle]="{'background' : color,}">rojo</span>.
     </li>
     <li *ngSwitchCase=" 'blue'">
-        el color mas comun es <span [ngStyle] ="{'background' : color,}">azul</span>.
+        el color mas comun es <span [ngStyle]="{'background' : color,}">azul</span>.
     </li>
 </ul>
 <hr>

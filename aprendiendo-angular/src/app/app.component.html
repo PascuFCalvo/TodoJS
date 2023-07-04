@@ -1,10 +1,30 @@
 <p>aprendiendo angular</p>
 
-<div [ngStyle] = "{'background': config.color}"><h2>{{titulo}}</h2>
-<h3>{{descripcion }}</h3></div>
+<div [ngStyle]="{'background': config.color}">
+    <h2>{{titulo}}</h2>
+    <h3>{{descripcion }}</h3>
+</div>
+<p>Menu de navegacion </p>
+<nav>
+    <a [routerLink]="['/home']"[routerLinkActive]="['activado']">Home</a>
+    <!--esto separa los links con un espacio-->
+    &nbsp;
+    <a [routerLink]="['/zapatillas']"[routerLinkActive]="['activado']">Zapatillas</a>
+    &nbsp;
+    <a [routerLink]="['/videojuegos']"[routerLinkActive]="['activado']">Videojuegos</a>
+    &nbsp;
+    <a [routerLink]="['/cursos']"[routerLinkActive]="['activado']">Cursos</a>
+    &nbsp;
+    <a [routerLink]="['/externo']"[routerLinkActive]="['activado']">Externo</a>
 
-<videojuego *ngIf ="mostrar_videojuegos"></videojuego>
+</nav>
+
+<hr>
+<!--<videojuego *ngIf ="mostrar_videojuegos"></videojuego>
 <button (click)="ocultarVideojuegos(false)" *ngIf = "mostrar_videojuegos">Ocultar</button>
 <button (click)="ocultarVideojuegos(true)" *ngIf = "!mostrar_videojuegos">Mostrar</button>
-<app-cursos></app-cursos>
-<zapatillas></zapatillas>
+<app-cursos></app-cursos>-->
+<!--<zapatillas></zapatillas>-->
+
+<!--borro las etiquetas estaticas y añado la dinamica que apunta para que cambie segun el link-->
+<router-outlet></router-outlet>

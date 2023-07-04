@@ -1,10 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { Zapatilla } from "../models/zapatilla";
-import { BoundElementProperty } from "@angular/compiler";
+//importamos el servicio zapatillas...
+import { ZapatillaService } from "../services/zapatillas.service";
+
 
 @Component({
     selector:"zapatillas",
-    templateUrl: "./zapatillas.component.html"
+    templateUrl: "./zapatillas.component.html",
+    //...lo cargamos aqui como provider al ser un servicio...
+    providers: [ZapatillaService]
 })
 
 export class ZapatillasComponent implements OnInit {
@@ -17,11 +21,16 @@ export class ZapatillasComponent implements OnInit {
     public miMarca:String;
     public color: string;
 
-    constructor(){
+    //...y hay que enchufarselo al constructor...
+    constructor(private  _ZapatillaService:ZapatillaService){
+        
         //era undefinded hasta que le has dicho que es un array nuevo
         this.miMarca ="";
         this.color = "red";
         this.marcaZapas = new Array;
+        //lo comento para llevarmelo al servicio y que lo devuelva desde alli
+        
+        /*
         this.zapatillas = [
             //accedes a tu objeto y creas una nueva 
             new Zapatilla("AirMax", "Nike", 150, "Negro", true),
@@ -30,9 +39,15 @@ export class ZapatillasComponent implements OnInit {
             new Zapatilla("Messi", "Nike", 100, "Azul", false),
             new Zapatilla("cr7", "adidas", 200, "Azul", false),
         ]
+        */
     }
 
-    ngOnInit(): void {
+    ngOnInit(): void{
+        //invocamos al servicio al arranque
+        this._ZapatillaService.getZapatillas();
+        alert(this._ZapatillaService.getTexto)
+        //le asignamos el valor al array zapatillas
+        this.zapatillas = this._ZapatillaService.getZapatillas();
         //console.log("OnInit Running")
         console.log (this.zapatillas)
         //console.log(this.zapatillas[2].nombre)
@@ -59,5 +74,18 @@ export class ZapatillasComponent implements OnInit {
     addMarca(){
         console.log(this.miMarca);
         this.marcaZapas.push(this.miMarca);
+    }
+
+    borrarMarca(indice:number){
+        //delete this.marcaZapas[indice]
+        this.marcaZapas.splice(indice, 1)
+    }
+
+    onBlur(){
+        console.log("has salido del input")
+    }
+
+    mostrarMarca(){
+        alert("has introducido " + this.miMarca)
     }
 }

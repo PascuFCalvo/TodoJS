@@ -1,0 +1,26 @@
+<!--ngsubmit evento especial que se activa al enviar formulario-->
+
+<form action = "" (ngSubmit)="onSubmit()">
+    <h2>Añadir un nuevo articulo</h2>
+    <div>
+        <label for = "">Id del articulo</label>
+        <input type = "text" placeholder="enter id" name="id" id = "id" [(ngModel)] = "id">
+    </div>
+    <div>
+        <label for = "">Nombre del articulo</label>
+        <input type = "text" name="title" id = "" [(ngModel)] = "title">
+    </div>
+
+    <div>
+        <label for = "">Precio</label>
+        <input type = "text" name="title" id = "" [(ngModel)] = "price">
+    </div>
+
+    <div>
+        <label for = "">Cantidad</label>
+        <input type = "text" name="title" id = "" [(ngModel)] = "quantity">
+    </div>
+
+    <input type="submit" value = "crear">
+
+</form>

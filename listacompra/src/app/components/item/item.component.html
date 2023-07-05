@@ -1,0 +1,31 @@
+
+<!--asignarle una clase segun un valor...-->
+<!--si item.competed es true, agrega el estilo checkbox-->
+<div class = "row" [ngClass]="{'checkbox':item.completed}">
+    <div class = "title">
+        <!--modificar la propiedad check de forma dinamica-->
+        <!--si item.completed = false no activara el check-->
+        <!--evento change, cada vez que cambia el valor-->
+        <input class = "checkbox" type="checkbox" [checked]="item.completed" (change)="onToggle(item)">
+        <!--PIPEs, para agregar funciones a nuestro contenido-->
+        <!--por ejemplo la funcion uppercase de angular transforma todo a mayusculas-->
+        {{item.title | uppercase}}
+    </div>
+    <div class = "price">
+        <!--funcion currency para convertirlo en formato "dinero"-->
+        {{item.price | currency : "€"}} 
+    </div>
+    <div class = "quantity">
+        {{item.quantity}}
+    </div>
+    <div class = "total">
+        <!--en vez de crear un total lo ponemos asi y ya esta-->
+        {{ (item.price * item.quantity | currency : "€") }} 
+    </div> 
+
+    <div class = "button">
+        <!--añadir eventos (evento)="funcion a la que llama el evento(parametros)"-->
+        <button (click)="onDelete(item)">Eliminar</button>
+    </div>
+    
+</div>

@@ -1,8 +1,6 @@
 //servicio para poder acceder a informacion de forma general sin importar
 //si esta en un componente o en otro
-
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Item } from '../components/models/item';
 
 

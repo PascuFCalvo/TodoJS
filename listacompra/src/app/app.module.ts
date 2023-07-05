@@ -1,6 +1,5 @@
 //aqui es donde se manejan las integraciones de servicios, modulos, componentes etc...
 
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -24,18 +23,15 @@ import { FormsModule } from '@angular/forms';
     ItemsComponent,
     ItemComponent,
     TotalComponent,
-    AddItemComponent
+    AddItemComponent,
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     //hay que decirle que vmamos a trabajar con formularios
     FormsModule,
-    //modulo para trabajar con http
-    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

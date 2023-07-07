@@ -15,6 +15,8 @@ import { AddItemComponent } from './components/add-item/add-item.component';
 //importa auto el formsmodule
 import { FormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,9 @@ import { FormsModule } from '@angular/forms';
     ItemComponent,
     TotalComponent,
     AddItemComponent,
+   
+  
+    
   ],
   imports: [
     BrowserModule,

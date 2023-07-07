@@ -8,6 +8,9 @@
 en este caso al final es como si le pasaras item -->    
     
 <app-total mensaje = "Total a pagar: " [total]="total"></app-total>
+<button (click)="loadData()">loadData</button>
+<button (click)="saveonlocal()">save in local</button>
+<button (click)="loadlocal()">Load from local</button>
 <app-item 
             *ngFor="let item of items" 
             [item]="item"

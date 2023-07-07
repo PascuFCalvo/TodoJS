@@ -13,7 +13,7 @@ export class ItemComponent implements OnInit {
   //configurar una entrada para decirle a este componente que va a recibir un objeto
   //le decimos que la propiedad item va a ser de tipo Item
   //y lo inicializamos para que no de error
-  @Input() item: Item = new Item();
+  @Input() item!: Item;
   //crear un evento personalizado
   //este evento se va a activar y va a tener en su definicion un objeto de tipo item
   //con esto dices que deleteItem es un evento

@@ -1,0 +1,15 @@
+.ficha {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ficha:hover{
+    background-color: darkred;
+}
+
+.ficha-flip{
+    background: blue; 
+}
+.ficha-flip:hover{
+    background-color: darkblue;
+}

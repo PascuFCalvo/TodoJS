@@ -5,6 +5,9 @@ import { Item } from '../models/item';
 import { ItemService } from 'src/app/services/item.service';
 import { subscribeOn } from 'rxjs';
 
+
+
+
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -58,4 +61,23 @@ export class ItemsComponent implements OnInit {
                   .map( indice => indice.quantity * indice.price)
                   .reduce( (acc, item) =>acc += item, 0);
   }
+
+  loadData(){
+   
+    this.items = this.itemService.getItems();
+    console.log(this.items)
+  }
+
+  
+  loadlocal() {
+    console.log("click")
+    this.items = this.itemService.loadlocal();
+    console.log (this.items)
+    
+    }
+  
+    saveonlocal() {
+      console.log("click")
+      this.itemService.saveonlocal();
+    }
 }

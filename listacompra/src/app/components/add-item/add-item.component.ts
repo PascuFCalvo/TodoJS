@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-add-item',
   templateUrl: './add-item.component.html',
@@ -31,9 +32,19 @@ export class AddItemComponent implements OnInit {
     item.price = this.price;
     item.quantity = this.quantity;
     item.completed = false;
-
+    if(this.itemService.availableId(this.id)){
+      
+      //alert("error");
+      this.itemService.firstidavaliable();
+      return;}
+    //this.itemService.lowerId(item.id);
     this.itemService.addItem(item);
+    this.itemService.creararrayids(item.id);
+    //this.itemService.firstidavaliable();
     this.router.navigate(["/"])
+    
+    
+    
   }
 
 }

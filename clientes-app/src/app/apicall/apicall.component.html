@@ -1,0 +1,30 @@
+<hr>
+<p>Clientes recogidos desde la api</p>
+<button (click)="botonShowUsers()">Pedir usuarios</button>
+<button (click)="botonCloseUsers()">Ocultar usuarios</button>
+<button (click)="botonShowRandomUser()">Pedir usuario aleatorio</button>
+
+<div *ngIf="fakerandom"> {{ this.users[2].first_name }} {{ this.users[2].last_name }}<br>
+  <img src="{{ this.users[2].avatar }}" /><br>
+  {{ this.users[2].email }}<br>
+  {{this.users[2].opinion}}<br><br><br>
+</div>
+
+<div *ngIf="showUsers"> <!-- Agregar *ngIf para mostrar/ocultar los usuarios -->
+  <div *ngFor="let user of users; let indice = index">
+    {{indice +1 }}: {{ user.first_name }} {{ user.last_name }}<br>
+    <img src="{{ user.avatar }}" /><br>
+    {{ user.email }}<br>
+    {{ randomUser.opinion }}<br><br><br>
+    
+    <br><br><br>
+  </div>
+</div>
+<div *ngIf="randomUser">
+  
+  {{ randomUser.first_name }} {{ randomUser.last_name }}<br>
+  <img src="{{ randomUser.avatar }}" /><br>
+  {{ randomUser.email }}<br>
+  {{ randomUser.opinion }}<br><br><br>
+</div>
+

@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    height: 80px;
+    width: 500px;
+    justify-content: space-between;
+}
+
+
+
+.container input{
+    width: 250px;
+
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    
+    <div class="pantalla2">{{pantalla2}}</div>
+    <div class="pantalla1">{{pantalla1}}</div>
+</div>
+
+
+
+<div class="botones">
+    
+
+    <button #boton1 (click)="pantalla(boton1.innerHTML)">1</button>
+    <button #boton2 (click)="pantalla(boton2.innerHTML)">2</button>
+    <button #boton3 (click)="pantalla(boton3.innerHTML)">3</button>
+    <button #op (click)="operacion(op.innerHTML)">+</button>
+    <button #boton4 (click)="pantalla(boton4.innerHTML)">4</button>
+    <button #boton5 (click)="pantalla(boton5.innerHTML)">5</button>
+    <button #boton6 (click)="pantalla(boton6.innerHTML)">6</button>
+    <button #op1 (click)="operacion(op1.innerHTML)">-</button>
+    <button #boton7 (click)="pantalla(boton7.innerHTML)">7</button>
+    <button #boton8 (click)="pantalla(boton8.innerHTML)">8</button>
+    <button #boton9 (click)="pantalla(boton9.innerHTML)">9</button>
+    <button #op2 (click)="operacion(op2.innerHTML)">x</button>
+    <button #ac (click)="borrartodo()">ac</button>
+    <button #c (click)="borrar1()">c</button>
+    <button #boton0 (click)="pantalla(boton0.innerHTML)">0</button>
+    <button #op3 (click)="operacion(op3.innerHTML)">/</button>
+    <button #botoncoma (click)="anadirdecimal()">,</button>
+    <button #botoncambia (click)="cambiasigno()"> +/- </button>
+    <button class = "igual" #botonigual (click)="igual()">=</button>
+</div>

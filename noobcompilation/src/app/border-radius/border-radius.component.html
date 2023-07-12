@@ -1,0 +1,12 @@
+<p>Cambia los border radius</p>
+<div class="container">
+    <div class="caja" id="caja" #caja [ngStyle]="{backgroundColor:'grey', borderRadius : 'NumberTopLeft'}">
+    </div>
+
+    <div class="inputs">
+        <p>Top Left</p>
+        <input maxlength=2 (keydown.enter)="saveInput(Topleft.value)" #Topleft type="string" [(ngModel)]="TopLeft" />
+        <p>{{NumberTopLeft}}</p>
+    </div>
+
+</div>

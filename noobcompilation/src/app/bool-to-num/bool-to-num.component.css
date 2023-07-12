@@ -1,0 +1,25 @@
+.container{
+    width: 250px;
+    display: flex;
+    justify-content: space-around
+    
+}
+
+.resultado{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.numeroresultado{
+    
+    padding: 4px;
+    font-size: 40px;
+    color: orangered;
+    width: auto;
+    height: 40px;
+    border: solid 2px black;
+    display: grid;
+    place-content: center;
+}

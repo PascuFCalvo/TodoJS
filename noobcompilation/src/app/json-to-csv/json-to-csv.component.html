@@ -1,0 +1,19 @@
+<p>Copia el objeto JSON en el input e la derecha</p>
+
+<div class = "container">
+
+
+<div>
+    "name": "Molecule Man",<br>
+    "age": 29,<br>
+    "secretIdentity": "Dan Jukes",<br>
+    "powers": "Radiation resistance"
+</div>
+<div class = "derecha">
+<input type="text" #json/>
+<button type="button" (click)="convertir(json.value)">Convertir</button>
+</div>
+</div>
+<p *ngIf="this.csv"> tu JSON a CSV</p>
+<p>{{this.csv}}</p>
+  

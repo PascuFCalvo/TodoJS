@@ -22,8 +22,6 @@ export class ApicallService {
       })
     );
   }
-
-
   getRandomUser(): Observable<any> {
     return this.http.get('https://reqres.in/api/users').pipe(
       map((response: any) => {
@@ -33,6 +31,7 @@ export class ApicallService {
       })
     );
   }
+  
   generarOpinion(): string {
     // Generar el texto de Lorem Ipsum de forma aleatoria
     const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo ipsum non vestibulum ullamcorper. Morbi ullamcorper massa a lacus volutpat fermentum. Integer lacinia massa ac luctus lacinia. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed condimentum ligula id fermentum ultrices. Quisque in mauris id ligula maximus lacinia. Donec eu luctus odio, sit amet pharetra erat. Mauris vel fringilla risus. Nullam eget ipsum purus. Donec dignissim feugiat mi, eget tincidunt nibh lacinia et. Nulla facilisi. Donec elementum felis in mauris faucibus iaculis.';

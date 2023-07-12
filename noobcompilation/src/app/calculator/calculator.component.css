@@ -1,0 +1,19 @@
+.pantalla1{
+    width: 200px;
+    height: 20px;
+    border: solid 1px black;
+}
+.pantalla2{
+    width: 200px;
+    height: 20px;
+    border: solid 1px black;
+}
+.botones{
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.igual{
+    grid-column: span 2;
+}

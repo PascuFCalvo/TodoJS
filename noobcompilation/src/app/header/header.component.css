@@ -1,5 +1,8 @@
 .Cabesa{
-    background-color: rgb(45, 45, 248);
+    background-color: #336b87;
     color: white;
     text-align: center;
+    height: 50px;
+    top: 0;
+    margin-bottom: 20px;
 }

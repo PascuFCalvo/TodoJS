@@ -1,0 +1,203 @@
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.card{
+    width: 400px;
+    height: auto;
+    border: solid 5px rgb(255, 174, 0);
+    align-content:center;
+    display:grid;
+    
+}
+
+.articulo{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 0px;
+    
+}
+
+.desc{
+    display: flex;
+    margin: auto 50px;
+    justify-content: space-between;
+}
+
+.desc p{
+    color: blue;
+}
+
+.price {
+    font-size: xx-large;
+    margin-top: 0px
+}
+
+.subcard{
+    width: 400px;
+}
+
+.text{
+    width: 300px;
+    margin: auto;
+}
+
+.anadir{
+    place-self: flex end;
+    background-color: rgb(255, 174, 0);
+    width: 50px;
+    border-radius: 4px;
+    padding: 4px;
+    margin-bottom: 4px;
+    margin-left: 300px;
+}
+
+.darkmode{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom left, rgb(255, 255, 255) 50%, rgb(255, 174, 0) 50%);
+      
+}
+
+.darkmode:hover{
+    background: linear-gradient(to bottom left, rgb(255, 174, 0) 50%,rgb(255, 255, 255) 50%);
+}
+.calificacion {
+    display: flex;
+    margin-bottom: 8px ;
+    margin-left: 160px;
+    
+}
+
+.bola{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 174, 0);
+    border: solid 2px blue;
+    border-radius: 50%;
+    margin: 2px;
+}
+.bolavacia{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: solid 2px blue;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+
+
+
+
+
+
+
+.containerdark {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(32,32,44);
+}
+
+.carddark{
+    background-color: rgb(32,32,44);
+    width: 400px;
+    height: auto;
+    border: solid 5px rgb(180, 20, 186);
+    align-content:center;
+    display:grid;
+    
+}
+.articulodark{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 0px;
+    
+}
+
+.descdark{
+    display: flex;
+    margin: auto 50px;
+    justify-content: space-between;
+}
+
+.descdark p{
+    color: rgb(1, 147, 66);
+}
+
+.pricedark {
+    font-size: xx-large;
+    margin-top: 0px
+}
+
+.subcarddark{
+    width: 400px;
+}
+
+.textdark{
+    color: antiquewhite;
+    width: 300px;
+    margin: auto;
+}
+
+.anadirdark{
+    place-self: flex end;
+    background-color: rgb(180, 20, 186);
+    width: 50px;
+    border-radius: 4px;
+    padding: 4px;
+    margin-bottom: 4px;
+    margin-left: 300px;
+}
+
+.darkmodedark{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom left, rgb(128,20,186) 50%, rgb(0, 0, 0) 50%);
+      
+}
+
+.darkmodedark:hover{
+    background: linear-gradient(to bottom left, rgb(0, 0, 0) 50%,rgb(128,20,186) 50%);
+}
+.calificaciondark {
+    display: flex;
+    margin-bottom: 8px ;
+    margin-left: 160px;
+    
+}
+
+.boladark{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(180, 20, 186);
+    border: solid 2px rgb(1, 147, 66);
+    border-radius: 50%;
+    margin: 2px;
+}
+.bolavaciadark{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: solid 2px rgb(1, 147, 66);
+    border-radius: 50%;
+    margin: 2px;
+}

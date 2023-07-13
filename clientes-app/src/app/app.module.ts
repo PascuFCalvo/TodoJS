@@ -8,6 +8,7 @@ import { ClientesModule } from './clientes/clientes.module';
 import { ApicallService } from './apicall/apicall.service';
 import { ApicallComponent } from './apicall/apicall.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ApiDarkModeComponent } from './api-dark-mode/api-dark-mode.component';
 
 
 
@@ -16,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
   declarations: [
     AppComponent,
     ApicallComponent,
+    ApiDarkModeComponent,
     
   ],
   imports: [

@@ -12,7 +12,8 @@ let numerostring:string = "";
 })
 
 export class BoolToNumComponent  {
-convertido:any = 0;
+convertido:boolean = false;
+convert:number = 0
   
 
 constructor(){}
@@ -24,6 +25,7 @@ validar(value:string){
       alert("error, introduce un numero binario");
       
     }
+    
     else{
       this.convertir(numerostring)
       
@@ -32,8 +34,11 @@ validar(value:string){
 }
 
 convertir(numerostring:string){
-  this.convertido =  +Number.parseInt(numerostring,2);
-  console.log(typeof this.convertido, this.convertido)
+  
+  this.convertido = true;
+  this.convert =  +Number.parseInt(numerostring,2);
+  
+  
   
   }
 

@@ -1,12 +1,9 @@
 import { RouterModule} from '@angular/router';
 import { Routes } from '@angular/router';
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { BoolToNumComponent } from './bool-to-num/bool-to-num.component';
-import { routing } from './app-routing/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BorderRadiusComponent } from './border-radius/border-radius.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { JSONToCSVComponent } from './json-to-csv/json-to-csv.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {
@@ -38,6 +37,10 @@ const routes: Routes = [
     component: CalculatorComponent,
   },
   {
+    path: 'darkmode',
+    component: DarkModeComponent,
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },
@@ -52,18 +55,18 @@ const routes: Routes = [
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-   
     JSONToCSVComponent,
-        CalculatorComponent,
+    CalculatorComponent,
     
+    DarkModeComponent
     
-    
-    
+ 
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

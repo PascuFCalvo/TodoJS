@@ -1,4 +1,6 @@
-<p>Introduce un numero binario de maximo 8 caracteres en el campo y obten su numero entero</p>
+
+<body>
+    <p class="texto">Introduce un numero binario de maximo 8 caracteres en el campo y obten su numero entero</p>
 <div class="container">
     <div class="formulario">
         <input #inputBinario type="text" placeholder="Introduce un numero binario" autocomplete="off" maxlength=8/>
@@ -8,5 +10,6 @@
 
 <div class="resultado" *ngIf="convertido">
     <p>Tu numero en binario es:</p>
-    <div class="numeroresultado">{{convertido}}</div>
+    <div class="numeroresultado">{{convert}}</div>
 </div>
+</body>

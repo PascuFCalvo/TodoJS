@@ -14,6 +14,9 @@ import { JSONToCSVComponent } from './json-to-csv/json-to-csv.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClimaComponent } from './clima/clima.component';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -41,6 +44,10 @@ const routes: Routes = [
     component: DarkModeComponent,
   },
   {
+    path: 'clima',
+    component: ClimaComponent,
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },
@@ -57,8 +64,8 @@ const routes: Routes = [
     FooterComponent,
     JSONToCSVComponent,
     CalculatorComponent,
-    
-    DarkModeComponent
+    DarkModeComponent,
+    ClimaComponent
     
  
   ],
@@ -67,6 +74,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

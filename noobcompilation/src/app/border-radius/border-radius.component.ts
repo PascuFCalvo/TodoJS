@@ -1,31 +1,16 @@
-import { Component, } from '@angular/core';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-border-radius',
   templateUrl: './border-radius.component.html',
-  styleUrls: ['./border-radius.component.css']
-}) 
-
+  styleUrls: ['./border-radius.component.css'],
+})
 export class BorderRadiusComponent {
-  
-  TopLeft:string= "";
-  NumberTopLeft:number = 0
+  NumberTopLeft: number = 0;
+  inputlleno: boolean = false;
+  topLeft: string = '';
 
-  saveInput(value:any){
-
-  this.TopLeft = value;
-  this.NumberTopLeft = +this.TopLeft
-
-  console.log(this.NumberTopLeft)
-  
-  
+  saveInput() {
+    this.topLeft = this.NumberTopLeft + 'px';
   }
-
-  
-  
-  
-
- 
-
 }

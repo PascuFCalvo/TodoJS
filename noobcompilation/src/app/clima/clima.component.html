@@ -1,0 +1,17 @@
+<body>
+    <p>Introduce una ciudad</p>
+    <input #cityname  type = "text" (keyup.enter)="guardarciudad(cityname)"/>
+    <button #botoncityname (click)="guardarciudad(cityname)">GO!</button>
+
+    <div>
+        <div class = "cardclima" *ngIf="clima">
+            <p>Pais: {{clima.sys.country}}</p>
+            <p>Temperatura: {{truncarclima(clima.main.temp)}}</p>
+            <p>Humedad: {{clima.main.humidity}}</p>
+            <p>Nubes: {{clima.weather[0].description}}</p>
+            
+        </div>
+        
+
+    </div>
+</body>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DarkModeComponent {
 
-  public modoOscuro:boolean = false;
+  public modoOscuro = false;
 
 toggleDark(){
 

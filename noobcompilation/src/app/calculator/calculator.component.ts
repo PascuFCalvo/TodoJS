@@ -74,26 +74,18 @@ export class CalculatorComponent {
     this.memoria = op;
 
     this.pantallas();
-    
 
     if (this.pantalla1.length) {
       this.asignaroperandos();
-      if (this.memoria === "+") {
+      if (this.memoria === '+') {
         this.resultado = this.operando1 + this.operando2;
-        
       } else if (this.memoria === '-') {
         this.resultado = this.operando1 - this.operando2;
-        
       } else if (this.memoria === 'x') {
         this.resultado = this.operando1 * this.operando2;
-        
       } else if (this.memoria === '/') {
         this.resultado = this.operando1 / this.operando2;
-        
       }
-      //this.pantalla2 = this.resultado.toString();
-      //this.pantalla1 = '';
-      
     }
   }
 

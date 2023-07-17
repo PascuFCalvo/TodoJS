@@ -1,0 +1,85 @@
+.bloque1{
+    margin-top: 128px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-top: 128px;
+    width: 800px;
+    
+}
+
+.tarjeta{
+    width: 180px;
+    margin:24px
+}
+
+.tarjeta p{
+    font-size: 12px;
+}
+
+.tarjeta img{
+    width: 36px;
+    margin-left: 60px;
+    
+}
+
+.bloque2{
+    display: grid;
+    width: 360px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 100px
+}
+
+.bloque2 h2{
+    margin: auto;
+    text-justify:newspaper
+}
+
+.tarjetasopinion{
+    margin-left: 48px;
+    display: flex;
+    
+}
+.tarjeta2{
+    width:400px;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.332);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 12px;
+
+}
+
+
+.cabezatarjeta{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+.usuario{
+    
+    width: 40px;
+    height: 30px;
+    
+}
+
+.info .name{
+    font-weight: bold;
+    margin-top: 8px;
+    
+}
+.info p{
+    margin-top: -10px;
+}
+
+.ok{
+    justify-self: start;
+    height: 20px;
+    width: 20px
+}
+
+.fecha{
+    color: rgba(0, 0, 0, 0.503);
+}

@@ -1,0 +1,101 @@
+header {
+    display: flex;
+    width: 100%;
+    height: 52px;
+    border-bottom: solid 1px rgb(64,64,64);
+    
+}
+
+.links{
+    display: flex;
+    margin-left: 520px;
+    height: 30px;
+    margin-right: 32px;
+}
+
+header h3{
+    margin-top: 12px;
+}
+
+header a{
+    padding: 12px;
+    
+}
+
+.YourCart{
+    height: 30px;
+    width:120px;
+    background-color: rgb(64, 64, 64);
+    color: white;
+    margin-top: 6px;
+ 
+}
+
+.LeftColumn{
+    display: grid;
+    width: 180px;
+    border-right: solid 1px rgb(64, 64, 64);
+    height: 100vh;
+}
+
+.botonera{
+    margin-top: 24px;
+
+}
+
+.topbutton {
+    width: 100px;
+    padding: 8px;
+    height: 30px;
+    background-color: rgb(64, 64, 64);
+    color: white;
+    margin: 8px;
+}
+
+.LeftColum h3{
+    margin-top: -10px;
+}
+
+.producto{
+    width: 100px;
+    height: 50px;
+    border: solid 1px black;
+}
+
+.detalles{
+    justify-content: center;
+    display: flex;
+    width: 400px;
+    height: 300px;
+    background-color:rgb(64, 64, 64);
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    
+    
+}
+
+.detalles img{
+    margin-top:20%;
+    width: 100px;
+    height: 100px;
+    padding:10px
+}
+
+.detalles p{
+ color: rgb(255, 255, 255);
+    font-size: medium;   
+}
+
+.flecha{
+    
+    height: 40px;
+}
+
+.body{
+    display:flex;
+}
+
+.info{
+    display: grid;
+}

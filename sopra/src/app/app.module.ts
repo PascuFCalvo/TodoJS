@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { Modulo1Component } from './modulo1/modulo1.component';
 import { Modulo2Component } from './modulo2/modulo2.component';
 import { Modulo3Component } from './modulo3/modulo3.component';
-import { Modulo4Component } from './modulo4/modulo4.component';
+
 import { VistaCompletaComponent } from './vista-completa/vista-completa.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { VistaCompletaComponent } from './vista-completa/vista-completa.componen
     Modulo1Component,
     Modulo2Component,
     Modulo3Component,
-    Modulo4Component,
+    
     VistaCompletaComponent
   ],
   imports: [

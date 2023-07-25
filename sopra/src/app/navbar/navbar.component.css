@@ -1,0 +1,188 @@
+body { 
+    height: auto;
+    margin: 0;
+}
+
+.body {
+    width: 800px;
+    margin:0px auto;
+    
+}
+.logo{
+    font-size: large;
+}
+
+.navbar{
+    width: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.204);
+    padding: 12px;
+    justify-content: space-between;
+    display: flex;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.navs{
+    margin-top: 3px;
+    margin-left: 300px;
+    
+}
+
+.navlink{
+    margin: 12px;
+    margin-right: 24px;
+    width: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.navlink:hover{
+    color: rgb(64, 64, 64);
+}
+.signup{
+    background-color: rgb(64, 64, 64);
+    width: 80px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 8px;
+    color: white;
+}
+
+.login{
+    background-color: white;
+    width: 80px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 72px;
+    color: rgb(64, 64, 64);
+    
+}
+
+.bloque1{
+    margin-top: 48px;
+    display: flex;
+    width: 240px;
+    
+}
+.bloque1 p{
+    margin-top: 24px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.imagenbloque1{
+    width: 480px;
+    height: auto;
+    margin-top: 8px;
+    margin-left: 120px;
+    border: solid 1px rgba(0, 0, 0, 0.100);
+    border-radius: 8px;
+}
+
+.botonbloque1{
+    background-color: rgb(64, 64, 64);
+    width: 160px;
+    height: 32px;
+    border-radius: 4px;
+    margin-right: 8px;
+    color: white;
+    font-size: 10px;
+}
+.bloque2{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 60px;
+    margin-left: 72px;
+}
+
+.tarjetacentral{
+    display: flex;
+    width: 200px;
+    height: 120px;
+    
+}
+
+.tarjetacentral img{
+    height: 24px;
+    margin-left:7px;
+    margin-top: 4px;
+    
+}
+.iconocentral {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(64, 64, 64, 0.2);
+    border-radius: 30%;
+}
+.textocentral{
+    margin-left: 60px;
+    margin-top: -18px;
+}
+
+.textocentral h4{
+    font-size:14px
+}
+
+.textocentral p{
+    font-size: 10px;
+}
+
+.bloque3 {
+    display:flex;
+    margin-left: 1px;
+    
+}
+
+.bloque3 img{
+    width: 360px;
+    height: auto;
+    margin-top: 8px;
+    margin-left: 24px;
+    margin-right: 72px;
+    border: solid 1px rgba(0, 0, 0, 0.100);
+    border-radius: 8px;
+
+}
+.textobloque3{
+    width: 360px;
+    margin-right: 48px;
+    margin-top: 48px;
+}
+
+.textobloque3 p {
+    font-size: 12px;
+}
+
+.bloque4 {
+    display:flex;
+    margin-top: 48px;
+    position: relative;
+}
+
+.bloque4 img{
+    width: 240px;
+    height: auto;
+    position: absolute;
+    right: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.100);
+    border-radius: 8px;
+
+}
+.textobloque4{
+    width: 360px;
+    margin-right: 48px;
+    margin-left: 72px;
+}
+
+.textobloque4 p {
+    font-size: 12px;
+}
+
+.pc1 {
+    position: absolute;
+    left: 400px;
+    top: 70px;
+    z-index: 100;
+}

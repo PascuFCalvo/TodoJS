@@ -35,7 +35,7 @@
                     <img src="assets/Tomaco.jpg">
                     <div class="info">
                         <div class="head">
-                            <p class ="producttitle">{{Datos[0].product}}</p> <button (click)="isfav()" class="heart-shape"></button>
+                            <p [ngClass]="{producttitle:!Datos[0].fav , favproducttitle:Datos[0].fav}">{{Datos[0].product}}</p> <button (click)="isfav()" class="heart-shape"></button>
                         </div>
                         <div [ngClass]="{divestrellas: Datos[0].rating >= 3, divestrellasbajapuntuacion: Datos[0].rating < 3}"><ng-container
                                 *ngFor="let element of primerelemento; let indice = index">
@@ -63,8 +63,8 @@
                     </div>
                 </div>
 
-                <div class *ngIf=primerproducto class="similares" >
-                    <p class="psimilares">Similar Products</p>
+                <div class *ngIf=primerproducto [ngClass]="{similares:!Datos[0].fav , similaresfav:Datos[0].fav}" >
+                    <p class="psimilares" >Similar Products</p>
                     <div class="infosimilares">
 
                         <div class="tarjetasimilar">
@@ -89,6 +89,61 @@
 
                                 </div>
                                 <p class = "similarprice">{{Datos[0].similarProducts[0].price}} {{Datos[0].similarProducts[0].currency}}</p>
+                            </div>
+
+                        </div>
+
+                        <div class *ngIf=primerproducto [ngClass]="{reviews:!Datos[0].fav , reviewsfav:Datos[0].fav}" >
+                            <div class = "leftreview">
+                                <div class = "imgreview"><img src ="/assets/{{Datos[0].reviews[0].name}}.jpg"(load)="funcionreview1(Datos[0].reviews[0].raging)"></div>
+                                <div class = "inforeview">
+                                    <p class = "namereview">{{Datos[0].reviews[0].name}}</p>
+                                    <p class = "datareview">{{Datos[0].reviews[0].date}}</p>    
+                                    
+                                    <div class ="valoracionreview" >
+                                        <div class="divestrellas"><ng-container *ngFor="let element of arrayreview1; let indice = index">
+
+                                            <div *ngIf="element === '1'">
+                                                <div class="estrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '/'">
+                                                <div class="mediaestrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '0'">
+                                                <div class="vaciaestrella" ></div>
+                                            </div>
+    
+                                        </ng-container></div>
+                                    </div>
+                                    
+                                    
+                                </div><div class = "parraforeview">{{Datos[0].reviews[0].opinion}}</div>
+                            </div>
+
+                            <div class = "leftreview">
+                                <div class = "imgreview"><img src ="/assets/{{Datos[0].reviews[1].name}}.jpg"(load)="funcionreview2(Datos[0].reviews[1].raging)"></div>
+                                <div class = "inforeview">
+                                    <p class = "namereview">{{Datos[0].reviews[1].name}}</p>
+                                    <p class = "datareview">{{Datos[0].reviews[1].date}}</p>    
+                                    
+                                    <div class ="valoracionreview" >
+                                        <div class="divestrellas"><ng-container *ngFor="let element of arrayreview2; let indice = index">
+
+                                            <div *ngIf="element === '1'">
+                                                <div class="estrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '/'">
+                                                <div class="mediaestrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '0'">
+                                                <div class="vaciaestrella" ></div>
+                                            </div>
+    
+                                        </ng-container></div>
+                                    </div>
+                                    
+                                    
+                                </div><div class = "parraforeview">{{Datos[0].reviews[1].opinion}}</div>
                             </div>
 
                         </div>
@@ -121,11 +176,13 @@
 
                         </div>
 
+                        
+
                     </div>
 
                 </div>
 
-                <!--tarjetas detalle al hacer click en el listado-->
+                
                 <div *ngIf=detalles
                     [ngClass]="{detalles: !Datos[indiceproductoseleccionado].fav , detallesfav:  Datos[indiceproductoseleccionado].fav}">
                     <img src="assets/{{datosclick.product}}.jpg">
@@ -160,7 +217,7 @@
                     </div>
                 </div>
 
-                <div class *ngIf="detalles && datosclick.similarProducts.length > 0" class="similares">
+                <div class *ngIf="detalles && datosclick.similarProducts.length > 0" [ngClass]="{similares: !Datos[indiceproductoseleccionado].fav , similaresfav:  Datos[indiceproductoseleccionado].fav}">
                     <p class="psimilares">Similar Products</p>
                     <div class="infosimilares">
 
@@ -187,6 +244,61 @@
                                 </div>
                                 <p class = "similarprice">{{datosclick.similarProducts[0].price}} {{datosclick.similarProducts[0].currency}}
                                 </p>
+                            </div>
+
+                        </div>
+
+                        <div *ngIf=primerproducto [ngClass]="{reviews:!datosclick.fav , reviewsfav:datosclick.fav}" >
+                            <div class = "leftreview">
+                                <div class = "imgreview"><img src ="/assets/{{datosclick.reviews[0].date}}.jpg"(load)="funcionreview1(datosclick.reviews[0].raging)"></div>
+                                <div class = "inforeview">
+                                    <p class = "namereview">{{datosclick.reviews[0].name}}</p>
+                                    <p class = "datareview">{{datosclick.reviews[0].date}}</p>    
+                                    
+                                    <div class ="valoracionreview" >
+                                        <div class="divestrellas"><ng-container *ngFor="let element of arrayreview1; let indice = index">
+
+                                            <div *ngIf="element === '1'">
+                                                <div class="estrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '/'">
+                                                <div class="mediaestrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '0'">
+                                                <div class="vaciaestrella" ></div>
+                                            </div>
+    
+                                        </ng-container></div>
+                                    </div>
+                                    
+                                    
+                                </div><div class = "parraforeview">{{datosclick.reviews[0].opinion}}</div>
+                            </div>
+
+                            <div class = "leftreview">
+                                <div class = "imgreview"><img src ="/assets/{{datosclick.reviews[1].date}}.jpg"(load)="funcionreview2(datosclick.reviews[1].raging)"></div>
+                                <div class = "inforeview">
+                                    <p class = "namereview">{{datosclick.reviews[1].name}}</p>
+                                    <p class = "datareview">{{datosclick.reviews[1].date}}</p>    
+                                    
+                                    <div class ="valoracionreview" >
+                                        <div class="divestrellas"><ng-container *ngFor="let element of arrayreview2; let indice = index">
+
+                                            <div *ngIf="element === '1'">
+                                                <div class="estrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '/'">
+                                                <div class="mediaestrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '0'">
+                                                <div class="vaciaestrella" ></div>
+                                            </div>
+    
+                                        </ng-container></div>
+                                    </div>
+                                    
+                                    
+                                </div><div class = "parraforeview">{{datosclick.reviews[1].opinion}}</div>
                             </div>
 
                         </div>
@@ -266,7 +378,7 @@
                     </div>
                 </div>
 
-                <div class *ngIf="detalles && datosclick.similarProducts.length > 0" class="similares">
+                <div class *ngIf="detalles && datosclick.similarProducts.length > 0" [ngClass]="{similares: !Datos[indiceproductoseleccionado].fav , similaresfav:  Datos[indiceproductoseleccionado].fav}">
                     <p class="psimilares">Similar Products</p>
                     <div class="infosimilares">
 
@@ -322,6 +434,61 @@
                                 </div>
                                 <p class = "similarprice">{{datosclick.similarProducts[1].price}} {{datosclick.similarProducts[1].currency}}
                                 </p>
+                            </div>
+
+                        </div>
+
+                        <div [ngClass]="{reviews:!datosclick.fav , reviewsfav:datosclick.fav}" >
+                            <div class = "leftreview">
+                                <div class = "imgreview"><img src ="/assets/{{datosclick.reviews[0].name}}.jpg"(load)="funcionreview1(datosclick.reviews[0].raging)"></div>
+                                <div class = "inforeview">
+                                    <p class = "namereview">{{datosclick.reviews[0].name}}</p>
+                                    <p class = "datareview">{{datosclick.reviews[0].date}}</p>    
+                                    
+                                    <div class ="valoracionreview" >
+                                        <div class="divestrellas"><ng-container *ngFor="let element of arrayreview1; let indice = index">
+
+                                            <div *ngIf="element === '1'">
+                                                <div class="estrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '/'">
+                                                <div class="mediaestrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '0'">
+                                                <div class="vaciaestrella" ></div>
+                                            </div>
+    
+                                        </ng-container></div>
+                                    </div>
+                                    
+                                    
+                                </div><div class = "parraforeview">{{datosclick.reviews[0].opinion}}</div>
+                            </div>
+
+                            <div class = "leftreview">
+                                <div class = "imgreview"><img src ="/assets/{{datosclick.reviews[1].name}}.jpg"(load)="funcionreview2(datosclick.reviews[1].raging)"></div>
+                                <div class = "inforeview">
+                                    <p class = "namereview">{{datosclick.reviews[1].name}}</p>
+                                    <p class = "datareview">{{datosclick.reviews[1].date}}</p>    
+                                    
+                                    <div class ="valoracionreview" >
+                                        <div class="divestrellas"><ng-container *ngFor="let element of arrayreview2; let indice = index">
+
+                                            <div *ngIf="element === '1'">
+                                                <div class="estrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '/'">
+                                                <div class="mediaestrella" ></div>
+                                            </div>
+                                            <div *ngIf="element === '0'">
+                                                <div class="vaciaestrella" ></div>
+                                            </div>
+    
+                                        </ng-container></div>
+                                    </div>
+                                    
+                                    
+                                </div><div class = "parraforeview">{{datosclick.reviews[1].opinion}}</div>
                             </div>
 
                         </div>

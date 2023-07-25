@@ -1,11 +1,10 @@
 header {
-    margin-top: 10px;
-    display: flex;
-    width: 100%;
+
     height: 52px;
     border-bottom: solid 1px rgb(64, 64, 64);
     display: flex;
     align-items: center;
+
 }
 
 .links {
@@ -13,12 +12,16 @@ header {
     margin-left: 420px;
     height: 20px;
     margin-right: 32px;
-    
-    
+
+
 }
 
 
-.home,.about,.shop{border-right: 1px solid black;}
+.home,
+.about,
+.shop {
+    border-right: 1px solid black;
+}
 
 header h3 {
     margin-top: 12px;
@@ -27,7 +30,7 @@ header h3 {
 header a {
     padding-right: 24px;
     padding-left: 24px;
-    
+
 
 }
 
@@ -37,8 +40,8 @@ header a {
     background-color: rgb(64, 64, 64);
     color: white;
     margin-top: -6px;
-    
-    
+
+
 
 }
 
@@ -48,6 +51,7 @@ header a {
     border-right: solid 1px rgb(64, 64, 64);
     height: 100vh;
 }
+
 
 .botonera {
     margin-top: 24px;
@@ -69,40 +73,32 @@ header a {
 }
 
 
-
-.producttitle{
-    color: rgb(0, 0, 0)
-}
-.favproducttitle{
-    color: rgb(255, 255, 255)
+.producto button p {
+    margin: 10px;
+    margin-bottom: -12px;
 }
 
-
-
-.producto button p{
-   margin: 10px;
-   margin-bottom: -12px;
-}
-
-.producto button{
+.producto button {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    border:none;
-    width:190px;
+    border: none;
+    width: 190px;
     align-items: center;
-    
+
 }
 
 .detalles {
     justify-content: center;
     display: flex;
     width: 800px;
-    height: 500px;
+    height: auto;
     background-color: rgb(255, 255, 255);
     position: absolute;
     top: 100px;
     left: 200px;
+    margin-top: 10px;
+
 
 
 }
@@ -110,13 +106,15 @@ header a {
 .detallesfav {
     justify-content: center;
     display: flex;
-    width: 800px;
-    height: 500px;
-    background-color: rgba(128,128,128);
+    width: 801px;
+    height: auto;
+    background-color: rgba(128, 128, 128);
     position: absolute;
     top: 100px;
-    left: 200px;
-    color:white;
+    left: 199px;
+    color: white;
+    margin-top: 10px;
+    border-left: solid 1px white;
 
 }
 
@@ -126,11 +124,11 @@ header a {
 .similares {
     justify-content: center;
     display: grid;
-    width: 800px;
+    width: 834px;
     height: 200px;
     background-color: rgb(255, 255, 255);
     position: absolute;
-    top: 600px;
+    top: 582px;
     left: 199px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -139,100 +137,98 @@ header a {
 
 }
 
-.similaresfav{
+.similaresfav {
     justify-content: center;
     display: grid;
-    width: 800px;
+    width: 834px;
     height: 200px;
-    background-color: rgb(128,128,128);
+    background-color: rgb(128, 128, 128);
     position: absolute;
-    top: 600px;
+    top: 582px;
     left: 199px;
     border-top: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid white;
-    border-left: 1px solid rgba(0, 0, 0, 0.379);
-    
-}
-
-.similaresfav .psimilares{
-    color: white;
-}
-.infosimilares{
-    display:flex
-}
-
-.similaresfav .divestrellas{ display: flex;
-    position: relative;
-    justify-content: flex-start;
-    width: 100%;
-    height: 20px;
-    background-color: rgb(128,128,128);
-    
-    padding-bottom: 20px;
-
+    border-left: 1px solid rgb(255, 255, 255);
 
 }
 
-.similaresfav .tarjetainfosimilar {
-    color: white;
+
+.infosimilares {
+    display: flex;
+    border-right: solid 1px black;
+    width: 805px;
+    margin-left: 30px;
+    margin-top: 0px
 }
 
-.infosimilares img{
+
+.similaresfav .infosimilares {
+    display: flex;
+    border-right: solid 1px rgb(255, 255, 255);
+    width: 805px;
+    margin-left: 30px;
+    margin-top: 0px
+}
+
+.infosimilares img {
     margin: auto 2%;
 }
 
-.psimilares{
+.psimilares {
     position: absolute;
     font-size: 50px;
     text-align: center;
     height: 60px;
-    top:-50px;
-    right:240px
-    
+    top: -50px;
+    right: 240px
 }
-.tarjetasimilar{
+
+.tarjetasimilar {
     margin-top: 30px;
     width: 400px;
     height: auto;
-    display:grid;
+    display: grid;
     grid-template-columns: 140px auto;
 }
+.similaresfav .tarjetasimilar {
+    margin-top: 30px;
+    width: 400px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 140px auto;
+    background-color: rgb(128, 128, 128);
+}
 
-.tarjetasimilar img{
-    
-    
+.tarjetasimilar img {
+
+
     margin: auto;
     width: 100px;
     height: 100px;
-    
-    cursor: pointer;  
+
+    cursor: pointer;
 }
-.tarjetainfosimilar p{
+
+.tarjetainfosimilar p {
     margin-top: 40px;
+    margin-right: -30px;
 }
 
 
 
 .detalles img {
-    
+
     width: 200px;
     height: 200px;
     padding: 20px;
     margin: auto;
 }
-
 .detallesfav img {
+
     width: 200px;
     height: 200px;
     padding: 20px;
     margin: auto;
-}
-
-
-
-.detallesfav p {
-    color: rgb(255, 255, 255);
-    font-size: medium;
 }
 
 .flecha {
@@ -246,15 +242,31 @@ header a {
 
 .info {
     width: 400px;
+    height: auto;
     display: grid;
+    margin-right: -35px;
+    padding: 30px;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
     
-}
 
+}
 .detallesfav .info {
     width: 400px;
+    height: auto;
     display: grid;
+    margin-right: -35px;
+    padding: 30px;
+    border-right: solid 1px rgb(255, 255, 255);
+    border-left: solid 1px rgb(255, 255, 255);
+    background-color: rgb(128,128,128);
+    border-right: solid 1px rgb(255, 255, 255);
+    border-left: solid 1px rgb(255, 255, 255);
     
+
 }
+
+
 
 .imagenfull {
     width: 300px;
@@ -264,24 +276,14 @@ header a {
 }
 
 .head {
+    width: 400px;
     display: flex;
-    font-size: 50px;
     margin-top: -40px;
-    height: 90px;
-    
-}
-
-.detallesfav .head {
-    display: flex;
+    justify-content: space-between;
     font-size: 50px;
-    margin-top: -40px;
-    height: 90px;
-    
-    
+
+
 }
-
-
-
 
 
 .divestrellas {
@@ -291,22 +293,34 @@ header a {
     width: 100%;
     height: 20px;
     background-color: white;
-    
+
     padding-bottom: 20px;
 
 }
+.similaresfav .divestrellas {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(128, 128, 128);
 
+    padding-bottom: 20px;
+
+}
 .detallesfav .divestrellas {
     display: flex;
     position: relative;
     justify-content: flex-start;
     width: 100%;
     height: 20px;
-    background-color: rgba(128,128,128);
-    
+    background-color: rgb(128, 128, 128);
+
     padding-bottom: 20px;
 
 }
+
+
 
 .divestrellasbajapuntuacion {
     display: flex;
@@ -315,25 +329,27 @@ header a {
     width: 100%;
     height: 20px;
     background-color: white;
-    
+
     padding-bottom: 20px;
 
 
 }
-
 .detallesfav .divestrellasbajapuntuacion {
     display: flex;
     position: relative;
     justify-content: flex-start;
     width: 100%;
     height: 20px;
-    background-color: rgba(128,128,128);
-    
+    background-color: rgb(128, 128, 128);
+
     padding-bottom: 20px;
+
 
 }
 
-.eliminarlistado{
+
+
+.eliminarlistado {
     border: none;
     background-color: rgb(64, 64, 64);
     color: white;
@@ -341,54 +357,56 @@ header a {
     height: 36px;
 
 }
-
-.detallesfav .eliminarlistado{
+.detallesfav .eliminarlistado {
     border: none;
-    background-color: rgb(255, 255, 255);
-    color: rgb(64, 64, 64);
+    background-color: white;
+    color: rgb(0, 0, 0);
     width: 140px;
     height: 36px;
 
 }
-.resumenreview{
+
+
+.resumenreview {
     position: absolute;
-    top:-16px;
+    top: -16px;
     left: 110px
 }
-.price{
+
+.price {
     padding-bottom: 20px;
     padding-top: 40px;
     font-size: 50px;
-    height:80px;
+    height: 80px;
     margin: 0px;
     border-bottom: solid 1px black;
     border-top: solid 1px black;
 }
-
-.detallesfav .price{
+.detallesfav .price {
     padding-bottom: 20px;
     padding-top: 40px;
     font-size: 50px;
-    height:80px;
+    height: 80px;
     margin: 0px;
     border-bottom: solid 1px rgb(255, 255, 255);
     border-top: solid 1px rgb(255, 255, 255);
-    color: white;
-
 }
 
-.similarprice{
-    position: absolute;
-    top:100px;
-    font-size:20px}
 
-.tarjetainfosimilar p{
+
+.similarprice {
+    position: absolute;
+    top: 100px;
+    font-size: 20px
+}
+
+.tarjetainfosimilar p {
     font-size: 20px;
     margin-bottom: 8px;
     text-transform: uppercase
 }
 
-.heart-shape{
+.heart-shape {
     position: relative;
     width: 20px;
     height: 20px;
@@ -401,12 +419,13 @@ header a {
     padding: 0;
     border: none;
     top: 70px;
-    left: 70px;
-    
-    
+    margin-left: 10px;
+
+
 }
+
 .heart-shape:before,
-.heart-shape:after{
+.heart-shape:after {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -415,73 +434,86 @@ header a {
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    background-color: rgba(168,168,168);
-    
-    
+    background-color: rgba(168, 168, 168);
+
+
 }
-.heart-shape:before{
+
+.heart-shape:before {
     bottom: 0px;
     left: -10px;
-    
+
 }
-.heart-shape:after{
+
+.heart-shape:after {
     top: -10px;
     right: 0px;
 }
 
-.reviewsfav{
-    width: 800px;
+.reviewsfav {
+    padding: 15px;
+    width: 804px;
     display: grid;
-    position:absolute;
-    top: 201px;
+    position: absolute;
+    top: 200px;
     left: -1px;
     justify-content: space-between;
     border-left: solid 1px rgb(255, 255, 255);
     border-bottom: solid 1px rgb(255, 254, 254);
-    background-color: rgb(128,128,128);
+    border-top: solid 1px rgb(255, 254, 254);
+    background-color: rgb(128, 128, 128);
     color: white;
-    border-left: solid 1px rgba(0, 0, 0, 0.393) ;
+    
+}
+.reviewsfav .parraforeview{
+    color: white;
 }
 
 
 
-.reviews{
-    width: 800px;
+.reviews {
+    padding: 15px;
+    width: 804px;
     display: grid;
-    position:absolute;
-    top: 201px;
+    position: absolute;
+    top: 200px;
     left: -1px;
     justify-content: space-between;
     border-left: solid 1px black;
     border-bottom: solid 1px black;
+    border-right: solid 1px black;
 }
 
 
 .leftreview {
-    display: flex;
-}
-.inforeview{
-    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 100px auto auto;
+
 }
 
-.parraforeview{
+.inforeview {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.parraforeview {
     width: 500px;
     margin-left: 40px;
     margin-top: 15px;
+    font-size: 14px;
+    color: rgb(64, 64, 64)
 }
 
-.imgreview img{
+.imgreview img {
     margin-top: 20px;
     height: 50px;
     width: auto;
 }
 
-.detallesfav .producttitle{
-    color: white;
-}
 
 
-.detallesfav .heart-shape{
+
+.detallesfav .heart-shape {
     position: relative;
     width: 20px;
     height: 20px;
@@ -494,12 +526,13 @@ header a {
     padding: 0;
     border: none;
     top: 70px;
-    left: 70px;
-    
-    
+
+
+
 }
+
 .detallesfav .heart-shape:before,
-.detallesfav .heart-shape:after{
+.detallesfav .heart-shape:after {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -509,15 +542,17 @@ header a {
     -o-border-radius: 50%;
     border-radius: 50%;
     background-color: rgb(255, 0, 0);
-    
-    
+
+
 }
-.detallesfav .heart-shape:before{
+
+.detallesfav .heart-shape:before {
     bottom: 0px;
     left: -10px;
-    
+
 }
-.detallesfav .heart-shape:after{
+
+.detallesfav .heart-shape:after {
     top: -10px;
     right: 0px;
 }
@@ -533,8 +568,9 @@ header a {
     border-bottom: 7px solid green;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .estrella:before {
     border-bottom: 8px solid green;
     border-left: 3px solid transparent;
@@ -547,8 +583,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .estrella:after {
     position: absolute;
     display: block;
@@ -562,7 +599,7 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 .mediaestrella {
@@ -576,8 +613,9 @@ header a {
     border-bottom: 7px solid greenyellow;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .mediaestrella:before {
     border-bottom: 8px solid greenyellow;
     border-left: 3px solid transparent;
@@ -590,8 +628,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .mediaestrella:after {
     position: absolute;
     display: block;
@@ -605,24 +644,25 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 .vaciaestrella {
     margin: 5px 0;
     position: relative;
     display: block;
-    color: rgba(168,168,168);
+    color: rgba(168, 168, 168);
     width: 0px;
     height: 0px;
     border-right: 10px solid transparent;
-    border-bottom: 7px solid rgba(168,168,168);
+    border-bottom: 7px solid rgba(168, 168, 168);
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .vaciaestrella:before {
-    border-bottom: 8px solid rgba(168,168,168);
+    border-bottom: 8px solid rgba(168, 168, 168);
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     position: absolute;
@@ -633,22 +673,23 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .vaciaestrella:after {
     position: absolute;
     display: block;
-    color: rgba(168,168,168);
+    color: rgba(168, 168, 168);
     top: 0.3px;
     left: -10.5px;
     width: 0px;
     height: 0px;
     border-right: 10px solid transparent;
-    border-bottom: 7px solid rgba(168,168,168);
+    border-bottom: 7px solid rgba(168, 168, 168);
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 
@@ -668,8 +709,9 @@ header a {
     border-bottom: 7px solid purple;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .detallesfav .estrella:before {
     border-bottom: 8px solid purple;
     border-left: 3px solid transparent;
@@ -682,8 +724,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .detallesfav .estrella:after {
     position: absolute;
     display: block;
@@ -697,7 +740,10 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
+}
+.similaresfav p{
+    color: white
 }
 
 
@@ -712,8 +758,9 @@ header a {
     border-bottom: 7px solid purple;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .similaresfav .estrella:before {
     border-bottom: 8px solid purple;
     border-left: 3px solid transparent;
@@ -726,8 +773,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .similaresfav .estrella:after {
     position: absolute;
     display: block;
@@ -741,7 +789,7 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 .similaresfav .mediaestrella {
@@ -755,8 +803,9 @@ header a {
     border-bottom: 7px solid plum;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .similaresfav .mediaestrella:before {
     border-bottom: 8px solid plum;
     border-left: 3px solid transparent;
@@ -769,8 +818,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .similaresfav .mediaestrella:after {
     position: absolute;
     display: block;
@@ -784,7 +834,7 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 
@@ -799,8 +849,9 @@ header a {
     border-bottom: 7px solid plum;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .detallesfav .mediaestrella:before {
     border-bottom: 8px solid plum;
     border-left: 3px solid transparent;
@@ -813,8 +864,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .detallesfav .mediaestrella:after {
     position: absolute;
     display: block;
@@ -828,24 +880,25 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 .detallesfav .vaciaestrella {
     margin: 5px 0;
     position: relative;
     display: block;
-    color: rgba(168,168,168);
+    color: rgba(168, 168, 168);
     width: 0px;
     height: 0px;
     border-right: 10px solid transparent;
-    border-bottom: 7px solid rgba(168,168,168);
+    border-bottom: 7px solid rgba(168, 168, 168);
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .detallesfav .vaciaestrella:before {
-    border-bottom: 8px solid rgba(168,168,168);
+    border-bottom: 8px solid rgba(168, 168, 168);
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     position: absolute;
@@ -856,22 +909,23 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .detallesfav .vaciaestrella:after {
     position: absolute;
     display: block;
-    color: rgba(168,168,168);
+    color: rgba(168, 168, 168);
     top: 0.3px;
     left: -10.5px;
     width: 0px;
     height: 0px;
     border-right: 10px solid transparent;
-    border-bottom: 7px solid rgba(168,168,168);
+    border-bottom: 7px solid rgba(168, 168, 168);
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 
@@ -886,8 +940,9 @@ header a {
     border-bottom: 7px solid rgb(255, 0, 0);
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .divestrellasbajapuntuacion .estrella:before {
     border-bottom: 8px solid rgb(255, 0, 0);
     border-left: 3px solid transparent;
@@ -900,8 +955,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .divestrellasbajapuntuacion .estrella:after {
     position: absolute;
     display: block;
@@ -915,7 +971,7 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 .divestrellasbajapuntuacion .mediaestrella {
@@ -929,8 +985,9 @@ header a {
     border-bottom: 7px solid palevioletred;
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .divestrellasbajapuntuacion .mediaestrella:before {
     border-bottom: 8px solid palevioletred;
     border-left: 3px solid transparent;
@@ -943,8 +1000,9 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .divestrellasbajapuntuacion .mediaestrella:after {
     position: absolute;
     display: block;
@@ -958,24 +1016,25 @@ header a {
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }
 
 .vaciaestrella {
     margin: 5px 0;
     position: relative;
     display: block;
-    color: rgba(168,168,168);
+    color: rgba(168, 168, 168);
     width: 0px;
     height: 0px;
     border-right: 10px solid transparent;
-    border-bottom: 7px solid rgba(168,168,168);
+    border-bottom: 7px solid rgba(168, 168, 168);
     border-left: 10px solid transparent;
     transform: rotate(35deg);
-    
+
 }
+
 .vaciaestrella:before {
-    border-bottom: 8px solid rgba(168,168,168);
+    border-bottom: 8px solid rgba(168, 168, 168);
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
     position: absolute;
@@ -986,20 +1045,21 @@ header a {
     display: block;
     content: '';
     transform: rotate(-35deg);
-    
+
 }
+
 .vaciaestrella:after {
     position: absolute;
     display: block;
-    color: rgba(168,168,168);
+    color: rgba(168, 168, 168);
     top: 0.3px;
     left: -10.5px;
     width: 0px;
     height: 0px;
     border-right: 10px solid transparent;
-    border-bottom: 7px solid rgba(168,168,168);
+    border-bottom: 7px solid rgba(168, 168, 168);
     border-left: 10px solid transparent;
     transform: rotate(-70deg);
     content: '';
-    
+
 }

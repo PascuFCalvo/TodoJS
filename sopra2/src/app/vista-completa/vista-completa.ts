@@ -20,7 +20,14 @@ export class VistaCompletaComponent {
   arrayimprimir:string[] = [];
   arrayimprimirsimilar:string[] = [];
   arrayimprimirsimilar2:string[] = [];
+  arrayreview1:string[] = [];
+  arrayreview2:string[] = [];
   primerelemento = ["1","1","1","1","/"];
+  fecha = new Date();
+  
+
+  
+  
   
 
   showdetails(valor: any, index: number) {
@@ -78,7 +85,7 @@ export class VistaCompletaComponent {
     if(!this.Datos[this.indiceproductoseleccionado].fav){
       this.Datos[this.indiceproductoseleccionado].fav = true;
     }else {delete this.Datos[this.indiceproductoseleccionado].fav}
-    console.log(this.indiceproductoseleccionado, this.Datos)
+    
   }
 
   favfalse(){
@@ -96,7 +103,7 @@ export class VistaCompletaComponent {
     }
    this.arrayimprimir = this.arrayestrellas;
    
-   console.log( this.arrayimprimir);
+   
    this.arrayestrellas = ["0","0","0","0","0"];
    
    
@@ -113,7 +120,43 @@ export class VistaCompletaComponent {
     }
    this.arrayimprimirsimilar = this.arrayestrellas;
    
-   console.log( this.arrayimprimir);
+   
+   this.arrayestrellas = ["0","0","0","0","0"];
+   
+   
+  }
+
+  funcionreview1(num:number){
+    console.log("entra")
+    let stringnum = num.toString();
+    for (let i = 0; i < Math.trunc(num) ; i++){
+      this.arrayestrellas.splice(i,1,"1")
+      
+    }
+    if (stringnum.includes(".")){
+      this.arrayestrellas.splice(Math.trunc(num),1,"/")
+    }
+   this.arrayreview1 = this.arrayestrellas;
+   
+   
+   this.arrayestrellas = ["0","0","0","0","0"];
+   
+   
+  }
+
+  funcionreview2(num:number){
+    console.log("entra")
+    let stringnum = num.toString();
+    for (let i = 0; i < Math.trunc(num) ; i++){
+      this.arrayestrellas.splice(i,1,"1")
+      
+    }
+    if (stringnum.includes(".")){
+      this.arrayestrellas.splice(Math.trunc(num),1,"/")
+    }
+   this.arrayreview2 = this.arrayestrellas;
+   
+   
    this.arrayestrellas = ["0","0","0","0","0"];
    
    
@@ -130,15 +173,14 @@ export class VistaCompletaComponent {
     }
    this.arrayimprimirsimilar2 = this.arrayestrellas;
    
-   console.log( this.arrayimprimir);
+   
    this.arrayestrellas = ["0","0","0","0","0"];
    
    
   }
 
   ajusterating(indice:number){
-    console.log(this.arrayimprimir);
-    console.log(indice);
+   
     this.Datos[this.indiceproductoseleccionado].rating = indice+1
     for(let x = indice; x>= 0; x--){
       this.arrayimprimir[x] = "1"
@@ -148,13 +190,12 @@ export class VistaCompletaComponent {
         this.arrayimprimir[j] = "0";
     }
     
-    console.log(this.arrayimprimir);
+    
   }
 
 
   ajusteratinginicio(indice:number){
-    console.log(this.arrayimprimir);
-    console.log(indice);
+    
     this.Datos[this.indiceproductoseleccionado].rating = indice+1
     for(let x = indice; x>= 0; x--){
       this.primerelemento[x] = "1"
@@ -164,7 +205,7 @@ export class VistaCompletaComponent {
         this.primerelemento[j] = "0";
     }
     
-    console.log(this.primerelemento);
+    
   }
 
  

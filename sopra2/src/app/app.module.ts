@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VistaCompletaComponent } from './vista-completa/vista-completa.component';
+import { VistaCompletaComponent } from './vista-completa/vista-completa';
+
 
 @NgModule({
   declarations: [

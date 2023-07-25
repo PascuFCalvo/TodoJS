@@ -91,13 +91,14 @@ header a {
 .detalles {
     justify-content: center;
     display: flex;
-    width: 800px;
+    width: 799px;
     height: auto;
     background-color: rgb(255, 255, 255);
     position: absolute;
     top: 100px;
     left: 200px;
-    margin-top: 10px;
+    margin-top: 33px;
+    border-top: 1px solid black;
 
 
 
@@ -106,7 +107,7 @@ header a {
 .detallesfav {
     justify-content: center;
     display: flex;
-    width: 801px;
+    width: 800px;
     height: auto;
     background-color: rgba(128, 128, 128);
     position: absolute;
@@ -115,6 +116,8 @@ header a {
     color: white;
     margin-top: 10px;
     border-left: solid 1px white;
+    margin-top: 33px;
+    border-top: 1px solid white;
 
 }
 
@@ -133,6 +136,7 @@ header a {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
+    
 
 
 }
@@ -149,7 +153,7 @@ header a {
     border-top: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid white;
     border-left: 1px solid rgb(255, 255, 255);
-
+   
 }
 
 
@@ -244,13 +248,31 @@ header a {
     width: 400px;
     height: auto;
     display: grid;
+    grid-template-rows: 80px 40px 240px;
     margin-right: -35px;
     padding: 30px;
     border-right: solid 1px black;
     border-left: solid 1px black;
+    border-top: solid 1px black;
+    margin-top: -1px;
     
 
 }
+
+.info .infodescripcion{
+    margin-top: -80px;
+    height: 80px;
+    overflow:inherit
+    
+}
+
+.info .infodescripcion p {
+    height: 40px;
+    
+}
+
+
+
 .detallesfav .info {
     width: 400px;
     height: auto;
@@ -262,6 +284,7 @@ header a {
     background-color: rgb(128,128,128);
     border-right: solid 1px rgb(255, 255, 255);
     border-left: solid 1px rgb(255, 255, 255);
+    border-top: solid 1px rgb(255, 255, 255);
     
 
 }

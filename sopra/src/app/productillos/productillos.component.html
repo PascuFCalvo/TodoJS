@@ -59,7 +59,7 @@
 
 
                         <p class="price">{{Datos[0].price}} {{Datos[0].currency}}</p>
-                        <p>{{Datos[0].description}}</p>
+                        <p class = "infodescripcion" >{{Datos[0].description}}</p>
 
                         <button class="eliminarlistado" (click)="eliminar()">Delete Item</button>
 
@@ -185,7 +185,7 @@
                                         </ng-container></div>
 
                                 </div>
-                                <p p class="similarprice">{{Datos[0].similarProducts[1].price}}
+                                <p class="similarprice">{{Datos[0].similarProducts[1].price}}
                                     {{Datos[0].similarProducts[1].currency}}</p>
                             </div>
 
@@ -228,7 +228,7 @@
 
 
                         <p class="price">{{datosclick.price}} {{datosclick.currency}}</p>
-                        <p>{{datosclick.description}}</p>
+                        <p class = "infodescripcion">{{datosclick.description}}</p>
 
                         <button class="eliminarlistado" (click)="eliminar()">Delete Item</button>
                     </div>
@@ -403,7 +403,7 @@
                         </div>
 
                         <p class="price">{{datosclick.price}} {{datosclick.currency}}</p>
-                        <p>{{datosclick.description}}</p>
+                        <p class = "infodescripcion">{{datosclick.description}}</p>
 
                         <button class="eliminarlistado" (click)="eliminar()">Delete Item</button>
                     </div>

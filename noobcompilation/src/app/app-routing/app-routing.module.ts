@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
@@ -8,6 +8,8 @@ import { BoolToNumComponent } from '../bool-to-num/bool-to-num.component';
 import { BorderRadiusComponent } from '../border-radius/border-radius.component';
 import { CalculatorComponent } from '../calculator/calculator.component';
 import { DarkModeComponent } from '../dark-mode/dark-mode.component';
+import { AsincroniaComponent } from '../asincronia/asincronia.component';
+import { PromesasComponent } from '../promesas/promesas.component';
 
 
 
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: "borderradius", component: BorderRadiusComponent},
   {path: "calculator", component: CalculatorComponent},
   {path: "darkmode", component: DarkModeComponent},
+  {path: "asincronia", component: AsincroniaComponent},
+  {path: "promesas", component: PromesasComponent},
   {path: "**", component: AppComponent}
 ];
 

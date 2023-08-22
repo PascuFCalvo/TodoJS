@@ -8,7 +8,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BorderRadiusComponent } from './border-radius/border-radius.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { JSONToCSVComponent } from './json-to-csv/json-to-csv.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -17,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClimaComponent } from './clima/clima.component';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { AsincroniaComponent } from './asincronia/asincronia.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,14 @@ const routes: Routes = [
     component: ClimaComponent,
   },
   {
+    path: 'asincronia',
+    component: AsincroniaComponent,
+  },
+  {
+    path: 'promesas',
+    component: PromesasComponent,
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },
@@ -61,11 +70,13 @@ const routes: Routes = [
     BorderRadiusComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent,
+    
     JSONToCSVComponent,
     CalculatorComponent,
     DarkModeComponent,
-    ClimaComponent
+    ClimaComponent,
+    AsincroniaComponent,
+    PromesasComponent
     
  
   ],

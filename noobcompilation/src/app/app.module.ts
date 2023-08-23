@@ -18,6 +18,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AsincroniaComponent } from './asincronia/asincronia.component';
 import { PromesasComponent } from './promesas/promesas.component';
+import { ModulosComponent } from './modulos/modulos.component';
 
 const routes: Routes = [
   {
@@ -76,7 +77,8 @@ const routes: Routes = [
     DarkModeComponent,
     ClimaComponent,
     AsincroniaComponent,
-    PromesasComponent
+    PromesasComponent,
+    ModulosComponent
     
  
   ],

@@ -19,6 +19,7 @@ export class AsincroniaComponent {
   public finproceso = '';
   public finproceso2 = '';
   public dialogo = '';
+  public convers = '';
 
   soyAsincrona() {
     setTimeout(() => {
@@ -60,28 +61,18 @@ export class AsincroniaComponent {
     this.saludo3 = 'hola, ' + nombre;
     if (this.i < 10) {
       if (this.i % 2 == 0) {
-        setTimeout(() => {
-            
-            let p = document.createElement('p');
-            let pTexto = document.createTextNode('Bla bla bla...(1000ms)');
-            p.appendChild(pTexto);
-            document.body.append(p);
-            
+        setTimeout(
+          () => {
+            this.convers = 'Bla bla bla...(1000ms)';
           },
 
-          1000
+          2000
         );
+      } else {
+        setTimeout(() => {
+          this.convers = 'Blo blo blo...(1000ms)';
+        }, 2000);
       }
-      else if (this.i % 2 != 0) {
-      setTimeout(() => {
-        
-        let p = document.createElement('p');
-        let pTexto = document.createTextNode('Blo blo blo...(1000ms)');
-        p.appendChild(pTexto);
-        document.body.append(p);
-        
-      }, 1000);
     }
-    }this.i++; 
-    }
+  }
 }
